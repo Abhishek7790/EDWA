@@ -1,0 +1,14 @@
+{
+  "tables": ["address","city","complaint","country","plan_postpaid","plan_prepaid","staff","subscriber"],
+  "host": "jdbc:postgresql://glue-project-instance-1.c1syoy4aulgv.ap-south-1.rds.amazonaws.com:5432/Dev",
+  "username": "postgres",
+  "pwd": "ppassword",
+  "driver": "org.postgresql.Driver",
+  "bronze_layer_path": "s3://glue-project123/bronze/",
+  "silver_layer_path": "s3://glue-project123/silver/",
+  "gold_layer_path": "s3://glue-project123/gold/",
+  "platinum_layer_path": "s3://glue-project123/platinum/",
+  "sub_dtl_tgt_tbl": "subscriber_details",
+  "cmp_dtl_tgt_tbl": "complaint_details",
+  "revenue_tbl": "revenue_report"
+}
