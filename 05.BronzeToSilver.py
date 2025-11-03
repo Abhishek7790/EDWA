@@ -1,3 +1,4 @@
+#this code do bronze to silver transformations and just change file format from any other to parquet
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
