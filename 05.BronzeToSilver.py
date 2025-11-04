@@ -44,7 +44,7 @@ def read_csv(spark, path, delimiter=',', inferschema='false', header='false'):
     return df
 
 def write_data_parquet_fs(df, path):
-    df.write.mode("append").format("parquet").save(path)
+    df.write.mode("overwrite").format("parquet").save(path)
     print(f"✅ Data written in parquet format at {path}")
 
 for table in table_list:
