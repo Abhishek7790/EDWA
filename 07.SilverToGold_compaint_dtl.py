@@ -6,7 +6,7 @@ import boto3
 from urllib.parse import urlparse
 import json
 
-spark = SparkSession.builder.appName("SilverToGold_CmpDtl").getOrCreate()
+spark = SparkSession.builder.appName("Silver_ToGold_CmpDtl").getOrCreate()
 
 def read_config_from_json(s3_path):
     parsed_url = urlparse(s3_path)

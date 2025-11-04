@@ -47,7 +47,7 @@ def extract_config_vars(config_data):
 # -------------------------------
 # Initialize Spark Session
 # -------------------------------
-spark = SparkSession.builder.appName("SourceToBronze").getOrCreate()
+spark = SparkSession.builder.appName("Source_To_Bronze").getOrCreate()
 
 # -------------------------------
 # Read config from S3

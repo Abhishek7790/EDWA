@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 
 currentdate = datetime.datetime.now().strftime("%Y-%m-%d")
 
-spark = SparkSession.builder.appName("GOLDtoREPORTING_Revenue").getOrCreate()
+spark = SparkSession.builder.appName("GOLDto_Plat_REPORTING_Revnue").getOrCreate()
 
 # -------------------------------
 # Function to read JSON config from S3
