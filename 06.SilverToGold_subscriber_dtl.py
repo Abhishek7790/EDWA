@@ -1,4 +1,4 @@
-#for silver to gold for suscriber details..!
+#for silver to gold for suscriber details!
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
@@ -6,7 +6,7 @@ import boto3
 from urllib.parse import urlparse
 import json
 
-spark = SparkSession.builder.appName("Silver_To_Gold_SubDtl").getOrCreate()
+spark = SparkSession.builder.appName("_Silver_To_Gold_SubDtl").getOrCreate()
 
 def read_config_from_json(s3_path):
     parsed_url = urlparse(s3_path)
