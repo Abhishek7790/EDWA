@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 
 currentdate = datetime.datetime.now().strftime("%Y-%m-%d")
 
-spark = SparkSession.builder.appName("GOLDto_Plat_REPORTING_Revnue").getOrCreate()
+spark = SparkSession.builder.appName("_GOLDto_Plat_REPORTING_Revnue").getOrCreate()
 
 # -------------------------------
 # Function to read JSON config from S3
@@ -65,7 +65,7 @@ revenue_report.show()
 
 # Write output to platinum layer
 def write_data_parquet_fs(spark, df, path):
-    df.write.format("parquet").mode("append").save(path)
+    df.write.format("parquet").mode("overwrite").save(path)
     print(f"✅ Data successfully written to {path}")
 
 write_data_parquet_fs(spark, revenue_report, platinum_layer_path + revenue_tbl)
