@@ -1,5 +1,5 @@
-# Source (RDBMS) to bronze ..!
-# Date:03-11-2025
+# Source (RDBMS) to bronze !
+# Date:07-11-2025
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
@@ -7,9 +7,9 @@ import json
 import boto3
 from urllib.parse import urlparse
 
-# -------------------------------
+# --------------------------------
 # UDF: Read JSON config from S3
-# -------------------------------
+# --------------------------------
 def read_config_from_json(s3_path):
     parsed_url = urlparse(s3_path)
     bucket = parsed_url.netloc
@@ -83,7 +83,7 @@ def read_data_from_rdbms(spark, host, username, pwd, driver, table_name):
 # UDF: Write data to S3 as CSV
 # -------------------------------
 def write_data_fs(df, path, delim=',', header="true"):
-    df.write.mode("overwrite").format("csv") \
+    df.write.mode("append").format("csv") \
         .option("delimiter", delim) \
         .option("header", header) \
         .save(path)
