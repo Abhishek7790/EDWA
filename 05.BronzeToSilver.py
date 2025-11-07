@@ -1,4 +1,4 @@
-#this code do bronze to silver transformations and just change file format from any other to parquet..!
+#this code do bronze to silver transformations..!
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
@@ -44,7 +44,7 @@ def read_csv(spark, path, delimiter=',', inferschema='false', header='false'):
     return df
 
 def write_data_parquet_fs(df, path):
-    df.write.mode("overwrite").format("parquet").save(path)
+    df.write.mode("append").format("parquet").save(path)
     print(f"✅ Data written in parquet format at {path}")
 
 for table in table_list:
