@@ -1,4 +1,4 @@
-#
+#this is file 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
@@ -83,7 +83,7 @@ res = test2.selectExpr(
 res.show(5)
 
 def write_data_parquet_fs(df, path):
-    df.write.mode("overwrite").format("parquet").save(path)
+    df.write.mode("append").format("parquet").save(path)
     print(f"✅ Data written successfully at {path}")
 
 write_data_parquet_fs(res, gold_layer_path.rstrip('/') + '/' + sub_dtl_tgt_tbl)
