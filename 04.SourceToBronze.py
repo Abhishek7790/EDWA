@@ -1,5 +1,4 @@
-# Source (RDBMS) to bronze !
-# Date:07-11-2025
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
@@ -83,7 +82,7 @@ def read_data_from_rdbms(spark, host, username, pwd, driver, table_name):
 # UDF: Write data to S3 as CSV
 # -------------------------------
 def write_data_fs(df, path, delim=',', header="true"):
-    df.write.mode("append").format("csv") \
+    df.write.mode("overwrite").format("csv") \
         .option("delimiter", delim) \
         .option("header", header) \
         .save(path)
