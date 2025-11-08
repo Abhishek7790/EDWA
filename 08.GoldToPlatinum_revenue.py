@@ -50,7 +50,7 @@ df_sb = read_parquet(spark, gold_layer_path + 'subscriber_details')
 
 df_sb.createOrReplaceTempView("subscriber")
 
-# Revenue report SQL
+# Revenue report SQL_
 revenue_report = spark.sql("""
     SELECT 
         SD.country AS Country,
