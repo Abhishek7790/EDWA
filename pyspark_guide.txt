@@ -4,3 +4,5 @@ persists and cache
 lazy evaluation
 catalyst optimizer
 map join
+broadcast variable 
+accumulator
