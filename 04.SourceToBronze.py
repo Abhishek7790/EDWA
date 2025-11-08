@@ -1,4 +1,4 @@
-
+# this is project code....! ok then
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
@@ -46,7 +46,7 @@ def extract_config_vars(config_data):
 # -------------------------------
 # Initialize Spark Session
 # -------------------------------
-spark = SparkSession.builder.appName("Source_To_Bronze").getOrCreate()
+spark = SparkSession.builder.appName("_Source_To_Bronze").getOrCreate()
 
 # -------------------------------
 # Read config from S3
@@ -56,7 +56,7 @@ config_data = read_config_from_json(config_file_path)
 
 # -------------------------------
 # Extract config variables
-# -------------------------------
+# ----------------------------------
 (tables, host, username, pwd, driver,
  bronze_layer_path, silver_path, gold_path,
  platinum_path, sub_dtl_table, cmp_dtl_table, revenue_table) = extract_config_vars(config_data)
@@ -82,7 +82,7 @@ def read_data_from_rdbms(spark, host, username, pwd, driver, table_name):
 # UDF: Write data to S3 as CSV
 # -------------------------------
 def write_data_fs(df, path, delim=',', header="true"):
-    df.write.mode("overwrite").format("csv") \
+    df.write.mode("append").format("csv") \
         .option("delimiter", delim) \
         .option("header", header) \
         .save(path)
