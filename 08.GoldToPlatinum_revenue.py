@@ -1,4 +1,4 @@
-#<comment>
+# <<comment>>
 import datetime
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -65,7 +65,7 @@ revenue_report.show()
 
 # Write output to platinum layer
 def write_data_parquet_fs(spark, df, path):
-    df.write.format("parquet").mode("append").save(path)
+    df.write.format("parquet").mode("overwrite").save(path)
     print(f"✅ Data successfully written to {path}")
 
 write_data_parquet_fs(spark, revenue_report, platinum_layer_path + revenue_tbl)
