@@ -1,4 +1,4 @@
-# this is project code....! now abc # diff optimizations  
+ # diff optimizations  
 transformations and actions
 persists and cache
 lazy evaluation
