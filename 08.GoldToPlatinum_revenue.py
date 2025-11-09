@@ -1,4 +1,4 @@
-# this is project code....! now abc # this is project code....! now abc
+# this is project code....
 import datetime
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
