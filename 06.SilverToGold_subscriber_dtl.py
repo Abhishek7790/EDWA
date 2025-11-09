@@ -1,5 +1,4 @@
-#ok then# this is project code....! now abc # this is project code....! now abc
-from pyspark.sql import SparkSession
+this is project code....! 
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
 import boto3
