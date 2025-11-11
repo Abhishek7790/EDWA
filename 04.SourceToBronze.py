@@ -1,6 +1,4 @@
-#----------
-# pyspark script
-#----------
+#
 
 # this is project code....! 
 from pyspark.sql import SparkSession
