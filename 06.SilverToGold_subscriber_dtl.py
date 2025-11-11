@@ -1,4 +1,7 @@
-this is project code....! 
+#this is project code....! 
+#----------
+# pyspark script
+#----------
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
 import boto3
