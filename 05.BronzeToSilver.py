@@ -1,5 +1,3 @@
-#this code do bronze to silver transformations.....! 
-
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
