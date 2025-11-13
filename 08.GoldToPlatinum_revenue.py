@@ -1,6 +1,7 @@
-#code
+
 #----------
 # pyspark script
+#codes
 #----------
 import datetime
 from pyspark.sql import SparkSession
