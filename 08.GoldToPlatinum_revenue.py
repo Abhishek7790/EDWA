@@ -1,6 +1,6 @@
 
 #----------
-#code
+# pyspark script
 
 #----------
 import datetime
