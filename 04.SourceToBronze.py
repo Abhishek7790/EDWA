@@ -1,8 +1,4 @@
 
-
-
-
-
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
@@ -27,7 +23,7 @@ def read_config_from_json(s3_path):
     return config_data
 
 # -------------------------------
-# UDF: Extract config values
+# UDF: Extract config val
 # -------------------------------
 def extract_config_vars(config_data):
     tables = config_data.get("tables", [])
