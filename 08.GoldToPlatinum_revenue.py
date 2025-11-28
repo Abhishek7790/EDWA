@@ -1,6 +1,3 @@
-#code
-
-
 
 
 import datetime
