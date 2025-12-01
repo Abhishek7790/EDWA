@@ -1,4 +1,4 @@
-#code
+
 
 {
   "tables": ["address","city","complaint","country","plan_postpaid","plan_prepaid","staff","subscriber"],
