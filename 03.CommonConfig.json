@@ -1,4 +1,4 @@
-
+---
 {
   "tables": ["address","city","complaint","country","plan_postpaid","plan_prepaid","staff","subscriber"],
   "host": "jdbc:postgresql://glue-project-instance-1.c1syoy4aulgv.ap-south-1.rds.amazonaws.com:5432/Dev",
